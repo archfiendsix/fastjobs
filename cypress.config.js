@@ -6,6 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+  videoRecording: false,
   "watchForFileChanges": true,
     "reporter": "mochawesome",
     "reporterOptions": {
