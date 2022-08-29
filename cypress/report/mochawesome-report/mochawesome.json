@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-19T09:20:33.244Z",
+    "end": "2022-07-19T09:20:49.892Z",
+    "duration": 16648,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f25c363c-b5a4-4384-b589-8708bf95b600",
+      "title": "",
+      "fullFile": "cypress/e2e/correct-creds.cy.js",
+      "file": "cypress/e2e/correct-creds.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f914df9f-a7cb-4fb5-bf00-9e27f170a06b",
+          "title": "Login test cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with correct credentials",
+              "fullTitle": "Login test cases Login with correct credentials",
+              "timedOut": null,
+              "duration": 8807,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Normal Login process using valid credentials\ncy.get(':nth-child(5) > .form-control').type('ace.simon.g@gmail.com');\ncy.get('#password').type('91366Fs8');\ncy.get('.form-group > .btn').click();",
+              "err": {},
+              "uuid": "12d7b3d6-8466-4819-8171-db779a58abe1",
+              "parentUUID": "f914df9f-a7cb-4fb5-bf00-9e27f170a06b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with incorrect credentials",
+              "fullTitle": "Login test cases Login with incorrect credentials",
+              "timedOut": null,
+              "duration": 5868,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Normal Login process using valid credentials\ncy.get(':nth-child(5) > .form-control').type('invalidemail@mail.com');\ncy.get('#password').type('invalidpassword123');\ncy.get('.form-group > .btn').click(); //Validates alert message of incorrect credentials entered\ncy.get('form[action=\"/site/login\"] .alert').contains('Invalid email and/or password.').should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(5) > .form-control`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(5) > .form-control`, but never found it.\n    at Context.eval (https://www.fastjobs.ph/__cypress/tests?p=cypress/e2e/correct-creds.cy.js:115:8)",
+                "diff": null
+              },
+              "uuid": "a8fc6a3c-903a-4d21-9ca9-06e2a7f33efa",
+              "parentUUID": "f914df9f-a7cb-4fb5-bf00-9e27f170a06b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "12d7b3d6-8466-4819-8171-db779a58abe1"
+          ],
+          "failures": [
+            "a8fc6a3c-903a-4d21-9ca9-06e2a7f33efa"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14675,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

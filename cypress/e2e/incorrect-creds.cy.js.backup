@@ -1,0 +1,13 @@
+describe('Automates login using incorrect credentials', () => {
+  it('Login with incorrect credentials', () => {
+
+    //Normal Login process using valid credentials
+    cy.visit('https://www.fastjobs.ph/site/login')
+    cy.get(':nth-child(5) > .form-control').type('invalidemail@mail.com')
+    cy.get('#password').type('invalidpassword123')
+    cy.get('.form-group > .btn').click()
+
+    //Validates alert message of incorrect credentials entered
+    cy.get('form[action="/site/login"] .alert').contains('Invalid email and/or password.').should('exist')
+  })
+})
