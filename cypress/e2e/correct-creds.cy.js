@@ -7,7 +7,7 @@ describe('Login test cases', () => {
         cy.visit('https://www.fastjobs.ph/site/login')
       })
     it('Login with correct credentials', () => {
-
+      // added comment
         //Normal Login process using valid credentials
         
         cy.get(':nth-child(5) > .form-control').type('ace.simon.g@gmail.com')
