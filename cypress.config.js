@@ -7,12 +7,12 @@ module.exports = defineConfig({
     },
   },
   "watchForFileChanges": true,
-    "reporter": "mochawesome",
-    "reporterOptions": {
-        "charts":true,
-        "overwrite": true,
-        "html":true,
-        "json":true,
-        "reportDir": "cypress/report/mochawesome-report"
-    }
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "charts": true,
+    "overwrite": true,
+    "html": true,
+    "json": true,
+    "reportDir": "cypress/report/mochawesome-report"
+  }
 });
