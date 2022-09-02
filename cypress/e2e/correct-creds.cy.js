@@ -5,6 +5,7 @@ describe('Login test cases', () => {
         // Since we want to visit the same URL at the start of all our tests,
         // we include it in our beforeEach function so that it runs before each test
         //added
+        // Aded comment
         cy.visit('https://www.fastjobs.ph/site/login')
       })
     it('Login with correct credentials', () => {
